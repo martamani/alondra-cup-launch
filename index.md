@@ -16,4 +16,4 @@ My pieces are made following the tradition of Buño, another village in Galicia 
 
 The surface changes. The essence remains.
 
-[See the pieces →](pieces.md) · [See the process →](process.md) · [FAQ →](faq.md) · [Get in touch →](https://tally.so/r/lbElkW) · [See how this was built →](system-architecture.html)
+[See the pieces →](pieces.md) · [Read the blog →](blog-alondra-cup.md) · [See the process →](process.md) · [FAQ →](faq.md) · [Get in touch →](https://tally.so/r/lbElkW) · [See how this was built →](system-architecture.html)
