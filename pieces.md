@@ -60,4 +60,16 @@ This piece is based on the original shape of the cunquelo, a small, handleless c
 **Material:** Buño clay, Mayco FN-006 blue glaze, Mayco FN-001 white glaze
 **Size:** cup 9 cm high *(details to complete)*
 
+---
+
+## Alondra Cup
+
+![Alondra cup](photos/alondra-cup.jpeg)
+
+**Material:** Buño clay, porcelain slip decoration **Size:** *(add measurements)* **Weight:** *(add weight)* **Color:** dark glaze with white porcelain-slip bird and starburst decoration
+
+Heat resistant. Microwave and dishwasher safe, but do not place directly over an open flame.
+
+A bird on one side, two starbursts as you turn the piece — drawn freehand with liquid porcelain onto the still-soft clay, no stencil. Thrown in one piece. Inspired by the moon jar tradition and Soetsu Yanagi's *mingei* philosophy: beauty in handmade, everyday objects, not display pieces. No two are exactly alike.
+
 [← Back home](index.md) · [See the process →](process.md)
