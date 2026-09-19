@@ -6,7 +6,9 @@ lead-routing automation.
 The pipeline runs in AirOps and Make.com; this repo has the write-up
 and the content it produced.
 
+**See how it all works:** https://canva.link/tswndjpdsesaofx
 **Read the case study:** https://martamani.github.io/pottery-ai-content-pipeline/
+
 
 ## What's here
 - `case-study.md` / `system-architecture.html` — how the system was designed
