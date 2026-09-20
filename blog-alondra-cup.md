@@ -43,11 +43,11 @@ Once the shape was thrown and still soft, I covered it partially with porcelain 
 
 That's the part I keep coming back to: freehand means uneven. The bird's wing on one cup won't match the bird's wing on the next. I used to see that as something to fix. I don't anymore.
 
-There's a piece in The Metropolitan Museum of Art in New York — an 18th-century Korean moon jar. It's not perfectly round. No moon jar is; they're thrown in two halves and joined at the middle, so the shape always drifts slightly. Whanki Kim, the artist who gave them their name, wrote that they're "round but not always the same shape... white but not always the same white."
+There is a piece in The Metropolitan Museum of Art in New York — an 18th-century Korean moon jar. It's not perfectly round. No moon jar is; they're thrown in two halves and joined at the middle, so the shape always drifts slightly. The artist who gave them their name, wrote that they are "round but not always the same shape... white but not always the same white."
 
 The Alondra cup is thrown in one piece.
 
-Soetsu Yanagi, a Japanese philosopher and founder of the folk-craft movement, built a philosophy around objects like this one — irregular, made by hand, not built for display — and called it mingei. It was his answer to the question of where beauty actually lives. Not in rare or perfect things made for display, he argued, but in ordinary, handmade, useful ones. A cup you drink from every morning. A bowl that gets chipped and stays in the cupboard anyway.
+Soetsu Yanagi, founder of the Japanese folk-craft movement, built a philosophy around objects like this one — irregular, made by hand, not built for display — and called it mingei. It was his answer to the question of where beauty actually lives. Not in rare or perfect things made for display, he argued, but in ordinary, handmade, useful ones. A cup you drink from every morning. A bowl that gets chipped and stays in the cupboard anyway.
 
 </div>
 
@@ -69,11 +69,11 @@ Una vez formada la pieza, y con el barro aún blando, la cubrí parcialmente con
 
 Esa es la parte a la que siempre vuelvo: a mano alzada significa irregular. El ala del pájaro de una taza no coincide con la de la siguiente. Antes lo veía como algo que corregir. Ya no.
 
-Hay una pieza en el Museo Metropolitano de Arte de Nueva York — una vasija lunar coreana del siglo XVIII. No es perfectamente redonda. Ninguna vasija lunar lo es; se tornean en dos mitades y se unen por el centro, así que la forma siempre se desvía un poco. Whanki Kim, el artista que les dio su nombre, escribió que son "redondas pero no siempre de la misma forma... blancas pero no siempre del mismo blanco".
+Hay una pieza en el Museo Metropolitano de Arte de Nueva York — una vasija lunar coreana del siglo XVIII. No es perfectamente redonda. Ninguna vasija lunar lo es; se tornean en dos mitades y se unen por el centro, así que la forma siempre se desvía un poco. El artista que les dio ese nombre escribió que son "redondas pero no siempre de la misma forma... blancas pero no siempre del mismo blanco".
 
 La copa Alondra está hecha de una sola pieza.
 
-Soetsu Yanagi, filósofo japonés y fundador del movimiento de artesanía popular, construyó una filosofía en torno a objetos como este — irregulares, hechos a mano, no pensados para exhibirse — y la llamó mingei. Era su respuesta a la pregunta de dónde vive realmente la belleza. No en las cosas raras o perfectas hechas para exhibirse, sostenía, sino en las cosas corrientes, hechas a mano, útiles. Una taza de la que bebes cada mañana. Un cuenco que se descascarilla y se queda igual en el armario.
+Soetsu Yanagi, fundador del movimiento de artesanía popular japonesa, construyó una filosofía en torno a objetos como este — irregulares, hechos a mano, no pensados para exhibirse — y la llamó mingei. Era su respuesta a la pregunta de dónde vive realmente la belleza. No en las cosas raras o perfectas hechas para ser expuestas, sostenía, sino en las cosas corrientes, hechas a mano, útiles. Una taza de la que bebes cada mañana. Un cuenco que se descascarilla y se queda igual en el armario.
 
 </div>
 
