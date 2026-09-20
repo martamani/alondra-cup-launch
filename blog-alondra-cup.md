@@ -69,7 +69,7 @@ Una vez formada la pieza, y con el barro aún blando, la cubrí parcialmente con
 
 Esa es la parte a la que siempre vuelvo: a mano alzada significa irregular. El ala del pájaro de una taza no coincide con la de la siguiente. Antes lo veía como algo que corregir. Ya no.
 
-Hay una pieza en el Museo Metropolitano de Arte de Nueva York — una vasija lunar coreana del siglo XVIII. No es perfectamente redonda. Ninguna vasija lunar lo es; se tornean en dos mitades y se unen por el centro, así que la forma siempre se desvía un poco. El artista que les dio ese nombre escribió que son "redondas pero no siempre de la misma forma... blancas pero no siempre del mismo blanco".
+Hay una pieza en el Museo Metropolitano de Arte de Nueva York — una vasija lunar coreana del siglo XVIII. No es perfectamente redonda. Ninguna vasija lunar lo es; se tornean en dos mitades y se unen por el centro, así que la forma siempre se desvía un poco. El artista que las llamó así escribió que son "redondas pero no siempre de la misma forma... blancas pero no siempre del mismo blanco".
 
 La copa Alondra está hecha de una sola pieza.
 
@@ -88,7 +88,7 @@ function showLang(lang) {
 </script>
 </div>
 
-[← Back home](https://martamani.github.io/alondra-cup-launch/) · [See the pieces →](https://martamani.github.io/alondra-cup-launch/pieces.html)
+[← Back home](https://martamani.github.io/alondra-cup-launch/) · [See the pieces →](https://martamani.github.io/alondra-cup-launch/pieces.html) · [Follow on Bluesky →](https://bsky.app/profile/automating-pottery.bsky.social)
 
 This project is maintained by [martamani](https://github.com/martamani)
 
