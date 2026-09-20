@@ -2,6 +2,8 @@
 
 This project builds on [Pottery AI Content Pipeline](https://github.com/martamani/pottery-ai-content-pipeline), which covers the base AI content workflow. This repo applies and extends that workflow for a single product launch (the Alondra Cup) into the Spanish market, including multilingual content, campaign assets, and a documented editorial process.
 
+Project diagram here https://canva.link/x5pxa6pnxdpsx8c
+
 ## Part 1 — Thesis, Problem, Solution
 
 **Thesis**
