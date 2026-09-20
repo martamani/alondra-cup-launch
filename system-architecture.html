@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #fbfaf8; }
+  * { box-sizing: border-box; }
+  a { color: #4c5f8f; text-decoration: none; border-bottom: 1px solid #c3cbdd; }
+  a:hover { color: #16161a; border-bottom-color: #16161a; }
+</style>
+</head>
+<body>
+
+<div style="background:#fbfaf8;color:#16161a;font-family:'Instrument Sans',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased">
+<div style="max-width:1120px;margin:0 auto;padding:88px 56px 120px">
+
+<header style="display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:end;padding-bottom:28px;border-bottom:1px solid #16161a">
+  <div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8e8e94;margin-bottom:22px">Case study · Multilingual content systems</div>
+    <h1 style="margin:0;font-size:52px;line-height:1.04;letter-spacing:-0.025em;font-weight:600;max-width:16em;text-wrap:balance">A multilingual content pipeline, built and debugged</h1>
+    <p style="margin:20px 0 0;font-size:19px;line-height:1.45;color:#5c5c62;max-width:34em;text-wrap:pretty">Five stages, from a product brief to a published, bilingual post — with a human editor as the QA layer.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.5;color:#5c5c62;padding-bottom:6px">
+    <div style="display:flex;gap:10px"><span style="color:#8e8e94;min-width:52px">FOR</span><span>Alondra Cup — Spain Launch</span></div>
+    <div style="display:flex;gap:10px"><span style="color: rgb(142, 142, 148); min-width: 52px;">BY</span><span>Marta</span></div>
+    <div style="display:flex;gap:10px"><span style="color:#8e8e94;min-width:52px">SITE</span><a href="https://martamani.github.io/alondra-cup-launch/">martamani.github.io</a></div>
+    <div style="display:flex;gap:10px"><span style="color:#8e8e94;min-width:52px">REPO</span><a href="https://github.com/martamani/alondra-cup-launch">alondra-cup-launch</a></div>
+  </div>
+</header>
+
+<section style="display:grid;grid-template-columns:200px 1fr;gap:56px;padding:44px 0 8px;border-bottom:1px solid #e4e2dd">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8e8e94;padding-top:5px">Premise</div>
+  <div style="display:flex;flex-direction:column;gap:16px;padding-bottom:40px">
+    <p style="margin:0;font-size:17px;line-height:1.6;max-width:44em;text-wrap:pretty">This project builds on <a href="https://github.com/martamani/pottery-ai-content-pipeline">pottery-ai-content-pipeline</a> — the first system I built. This time the brief is a real product launch: the Alondra Cup, entering the Spanish market, with a fictional content team.</p>
+    <p style="margin:0;font-size:17px;line-height:1.6;color:#5c5c62;max-width:44em;text-wrap:pretty">Claude drafts and translates. I fact-check, correct, and approve.</p>
+  </div>
+</section>
+
+<section style="padding:56px 0 0">
+  <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:8px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8e8e94">01 / System</div>
+  </div>
+  <h2 style="margin:0 0 6px;font-size:30px;line-height:1.15;letter-spacing:-0.02em;font-weight:600">The architecture</h2>
+  <p style="margin:0 0 40px;font-size:16px;color:#5c5c62;max-width:40em;text-wrap:pretty">Five stages. Human review sits in the middle, not at the edges — it's the step that catches what Claude gets wrong.</p>
+
+  <div style="background:#ffffff;border:1px solid #e4e2dd;padding:44px 40px 40px">
+    <div style="display:grid;grid-template-columns:1fr 22px 1fr 22px 1fr 22px 1fr 22px 1fr;align-items:stretch;gap:0">
+
+      <div style="border-top:2px solid #16161a;padding-top:14px;display:flex;flex-direction:column;gap:9px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#8e8e94">STAGE 01</div>
+        <div style="font-size:15px;font-weight:600;letter-spacing:-0.01em">Positioning &amp; Brief</div>
+        <div style="font-size:13px;line-height:1.45;color:#5c5c62">Product positioning and brand story — the moon jar reference, the mingei philosophy.</div>
+        <div style="margin-top:auto;padding-top:12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94">Marta</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#b4b2ad">→</div>
+
+      <div style="border-top:2px solid #4c5f8f;padding-top:14px;display:flex;flex-direction:column;gap:9px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#4c5f8f">STAGE 02</div>
+        <div style="font-size:15px;font-weight:600;letter-spacing:-0.01em">Drafting</div>
+        <div style="font-size:13px;line-height:1.45;color:#5c5c62">Blog, social, email, ads, sales playbook in English, then translated to Spanish.</div>
+        <div style="margin-top:auto;padding-top:12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94">Claude</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#b4b2ad">→</div>
+
+      <div style="border-top:2px solid #4c5f8f;padding-top:14px;display:flex;flex-direction:column;gap:9px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#4c5f8f">STAGE 03</div>
+        <div style="font-size:15px;font-weight:600;letter-spacing:-0.01em">Review &amp; Correction</div>
+        <div style="font-size:13px;line-height:1.45;color:#5c5c62">Fact-checked, edited for tone and voice, approved. Claude did not catch its own errors.</div>
+        <div style="margin-top:auto;padding-top:12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94">Marta</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#b4b2ad">→</div>
+
+      <div style="border-top:2px solid #4c5f8f;padding-top:14px;display:flex;flex-direction:column;gap:9px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#4c5f8f">STAGE 04</div>
+        <div style="font-size:15px;font-weight:600;letter-spacing:-0.01em">System of Record</div>
+        <div style="font-size:13px;line-height:1.45;color:#5c5c62">Draft → Approved → Ready to publish, tracked per item.</div>
+        <div style="margin-top:auto;padding-top:12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94">Notion</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#b4b2ad">→</div>
+
+      <div style="border-top:2px solid #4c5f8f;padding-top:14px;display:flex;flex-direction:column;gap:9px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#4c5f8f">STAGE 05</div>
+        <div style="font-size:15px;font-weight:600;letter-spacing:-0.01em">Publishing</div>
+        <div style="font-size:13px;line-height:1.45;color:#5c5c62">Filtered on status, posted automatically. Images still go up by hand.</div>
+        <div style="margin-top:auto;padding-top:12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94">Make.com → Bluesky</div>
+      </div>
+
+      <div style="grid-column:1 / 10;display:flex;justify-content:center;padding-top:20px"></div>
+
+      <div style="grid-column:1 / 10;background:#f3f4f8;border:1px solid #c3cbdd;padding:16px 20px;display:flex;align-items:center;gap:20px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#4c5f8f;white-space:nowrap">PARALLEL TRACK</div>
+        <div style="font-size:13.5px;line-height:1.45;color:#3c3c42">Website (GitHub Pages) — the blog post is published directly after Stage 03, outside this pipeline.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e4e2dd;border:1px solid #e4e2dd;margin-top:32px">
+    <div style="background:#fbfaf8;padding:24px 26px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;color:#8e8e94;margin-bottom:10px">DESIGN PRINCIPLE 01</div>
+      <div style="font-size:15.5px;font-weight:600;margin-bottom:7px;letter-spacing:-0.01em">Human review is the QA layer</div>
+      <div style="font-size:13.5px;line-height:1.5;color:#5c5c62;text-wrap:pretty">Claude produced fluent, on-brand drafts but introduced factual errors — wrong museum, wrong century, wrong technique. It did not self-correct.</div>
+    </div>
+    <div style="background:#fbfaf8;padding:24px 26px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;color:#8e8e94;margin-bottom:10px">DESIGN PRINCIPLE 02</div>
+      <div style="font-size:15.5px;font-weight:600;margin-bottom:7px;letter-spacing:-0.01em">Don't iterate live in the system of record</div>
+      <div style="font-size:13.5px;line-height:1.5;color:#5c5c62;text-wrap:pretty">Asking Claude to edit Notion rows directly via API didn't hold up at scale — it introduced duplicate rows and errors. Pasting finished drafts in by hand was more reliable.</div>
+    </div>
+    <div style="background:#fbfaf8;padding:24px 26px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;color:#8e8e94;margin-bottom:10px">DESIGN PRINCIPLE 03</div>
+      <div style="font-size:15.5px;font-weight:600;margin-bottom:7px;letter-spacing:-0.01em">Automate what's reliable, do the rest by hand</div>
+      <div style="font-size:13.5px;line-height:1.5;color:#5c5c62;text-wrap:pretty">Text-only Bluesky posting automates well. Image attachment doesn't have a clean mapping path yet, so those go up manually.</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:80px 0 0">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8e8e94;margin-bottom:8px">02 / Evidence</div>
+  <h2 style="margin:0 0 6px;font-size:30px;line-height:1.15;letter-spacing:-0.02em;font-weight:600">Nine steps</h2>
+  <p style="margin:0 0 8px;font-size:16px;color:#5c5c62;max-width:40em;text-wrap:pretty">All built and tested live.</p>
+
+  <div style="margin-top:36px;display:flex;flex-direction:column;gap:0">
+
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:56px;padding:32px 0;border-top:1px solid #16161a">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;color:#8e8e94;margin-bottom:6px">STAGE 01</div>
+        <div style="font-size:17px;font-weight:600;letter-spacing:-0.015em">Positioning &amp; Brief</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:22px;max-width:46em">
+        <div style="display:grid;grid-template-columns:34px 1fr;gap:18px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b4b2ad;padding-top:2px">01</div>
+          <div>
+            <div style="font-size:15.5px;font-weight:600;margin-bottom:4px">Defined the brief</div>
+            <div style="font-size:14px;line-height:1.5;color:#5c5c62">Alondra Cup positioning, the moon jar reference, the mingei philosophy — the ground truth every draft is checked against.</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94;margin-top:8px">HUMAN</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:56px;padding:32px 0;border-top:1px solid #e4e2dd">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;color:#4c5f8f;margin-bottom:6px">STAGE 02</div>
+        <div style="font-size:17px;font-weight:600;letter-spacing:-0.015em">Drafting</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:22px;max-width:46em">
+        <div style="display:grid;grid-template-columns:34px 1fr;gap:18px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b4b2ad;padding-top:2px">02</div>
+          <div>
+            <div style="font-size:15.5px;font-weight:600;margin-bottom:4px">Drafted the full content set</div>
+            <div style="font-size:14px;line-height:1.5;color:#5c5c62">Blog post, social copy, nurture emails, paid ads, and a sales playbook — English first.</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94;margin-top:8px">CLAUDE</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:34px 1fr;gap:18px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b4b2ad;padding-top:2px">03</div>
+          <div>
+            <div style="font-size:15.5px;font-weight:600;margin-bottom:4px">Translated and localized</div>
+            <div style="font-size:14px;line-height:1.5;color:#5c5c62">Full Spanish versions of the blog and social content, not machine translation.</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94;margin-top:8px">CLAUDE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:56px;padding:32px 0;border-top:1px solid #e4e2dd;background:#f3f4f8">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;color:#4c5f8f;margin-bottom:6px">STAGE 03</div>
+        <div style="font-size:17px;font-weight:600;letter-spacing:-0.015em">Review &amp; Correction</div>
+        <div style="font-size:13px;line-height:1.45;color:#5c5c62;margin-top:8px">The step that actually catches errors.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:22px;max-width:46em">
+        <div style="display:grid;grid-template-columns:34px 1fr;gap:18px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#a3aabd;padding-top:2px">04</div>
+          <div>
+            <div style="font-size:15.5px;font-weight:600;margin-bottom:4px">Caught what Claude got wrong</div>
+            <div style="font-size:14px;line-height:1.5;color:#3c3c42">Wrong museum, wrong century, wrong technique — all in a single blog draft. Claude did not flag any.</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94;margin-top:8px">HUMAN · FACT-CHECK</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:56px;padding:32px 0;border-top:1px solid #e4e2dd">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;color:#4c5f8f;margin-bottom:6px">STAGE 04</div>
+        <div style="font-size:17px;font-weight:600;letter-spacing:-0.015em">System of Record</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:22px;max-width:46em">
+        <div style="display:grid;grid-template-columns:34px 1fr;gap:18px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b4b2ad;padding-top:2px">05</div>
+          <div>
+            <div style="font-size:15.5px;font-weight:600;margin-bottom:4px">Logged every item in Notion</div>
+            <div style="font-size:14px;line-height:1.5;color:#5c5c62">Campaign, Channel, Content Type, Language, Owner, Publish Date, Status — one row per content piece.</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94;margin-top:8px">NOTION</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:56px;padding:32px 0;border-top:1px solid #e4e2dd">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;color:#4c5f8f;margin-bottom:6px">STAGE 05</div>
+        <div style="font-size:17px;font-weight:600;letter-spacing:-0.015em">Publishing</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:22px;max-width:46em">
+        <div style="display:grid;grid-template-columns:34px 1fr;gap:18px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b4b2ad;padding-top:2px">06</div>
+          <div>
+            <div style="font-size:15.5px;font-weight:600;margin-bottom:4px">Built the automation</div>
+            <div style="font-size:14px;line-height:1.5;color:#5c5c62">Notion trigger → filter on Status = Ready to publish → Bluesky "Create a Post" module.</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94;margin-top:8px">MAKE.COM</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:34px 1fr;gap:18px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b4b2ad;padding-top:2px">07</div>
+          <div>
+            <div style="font-size:15.5px;font-weight:600;margin-bottom:4px">Fixed a field-mapping bug</div>
+            <div style="font-size:14px;line-height:1.5;color:#5c5c62">The Text field was mapped to Notion's raw rich-text object, not its plain string, so every post failed on a false "300 characters" error. Remapped to the nested plain_text field.</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94;margin-top:8px">MAKE.COM · DEBUGGED</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:34px 1fr;gap:18px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b4b2ad;padding-top:2px">08</div>
+          <div>
+            <div style="font-size:15.5px;font-weight:600;margin-bottom:4px">Confirmed it end to end</div>
+            <div style="font-size:14px;line-height:1.5;color:#5c5c62">Text-only posts run automatically once a row is marked Ready to publish, no manual step in between.</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94;margin-top:8px">MAKE.COM · BLUESKY</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:34px 1fr;gap:18px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b4b2ad;padding-top:2px">09</div>
+          <div>
+            <div style="font-size:15.5px;font-weight:600;margin-bottom:4px">Published the blog</div>
+            <div style="font-size:14px;line-height:1.5;color:#5c5c62">Bilingual EN/ES toggle, live on GitHub Pages, outside the Notion/Make.com pipeline entirely.</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94;margin-top:8px">GITHUB PAGES</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="padding:80px 0 0">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8e8e94;margin-bottom:8px">03 / Constraint</div>
+  <h2 style="margin:0 0 6px;font-size:30px;line-height:1.15;letter-spacing:-0.02em;font-weight:600">No automation to upload images</h2>
+  <p style="margin:0 0 36px;font-size:16px;color:#5c5c62;max-width:40em;text-wrap:pretty">The text automation was not the hard part. Attaching a photo to an automated Bluesky post was.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 40px 1fr;align-items:stretch;gap:0">
+    <div style="background:#ffffff;border:1px solid #e4e2dd;padding:28px 30px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+        <div style="width:7px;height:7px;background:#8f5a45"></div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;color:#8f5a45">ATTEMPTED · ABANDONED</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#3c3c42">
+        <div style="padding:9px 0;border-bottom:1px dashed #e4e2dd">Notion image property</div>
+        <div style="padding:9px 0;border-bottom:1px dashed #e4e2dd">Make.com HTTP module — "Get a file"</div>
+        <div style="padding:9px 0;border-bottom:1px dashed #e4e2dd">Bluesky module Media field — needs binary data</div>
+        <div style="padding:9px 0;color:#8f5a45">✕ no clean mapping from a Notion field</div>
+      </div>
+      <div style="margin-top:18px;padding-top:16px;border-top:1px solid #e4e2dd;font-size:13.5px;line-height:1.5;color:#5c5c62;text-wrap:pretty">Added complexity for one field, on a project already running lean. Not worth it.</div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#b4b2ad">→</div>
+
+    <div style="background:#ffffff;border:1px solid #4c5f8f;padding:28px 30px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+        <div style="width:7px;height:7px;background:#4c5f8f"></div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;color:#4c5f8f">SIMPLIFIED · SAME OUTCOME</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#3c3c42">
+        <div style="padding:9px 0;border-bottom:1px dashed #e4e2dd">Make.com posts text automatically</div>
+        <div style="padding:9px 0;border-bottom:1px dashed #e4e2dd">Marta attaches the photo in the Bluesky app</div>
+        <div style="padding:9px 0;color:#4c5f8f">✓ published, with images, same day</div>
+      </div>
+      <div style="margin-top:18px;padding-top:16px;border-top:1px solid #e4e2dd;font-size:13.5px;line-height:1.5;color:#5c5c62;text-wrap:pretty">A thirty-second manual step beats a fragile automation for one field. The right tradeoff for this volume.</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:80px 0 0">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8e8e94;margin-bottom:8px">04 / Artefacts</div>
+  <h2 style="margin:0 0 36px;font-size:30px;line-height:1.15;letter-spacing:-0.02em;font-weight:600">What it looks like in the tools</h2>
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px">
+    <div style="min-width:0">
+      <div style="border:1px solid #e4e2dd;background:#ffffff;padding:10px">
+        <img src="photos/notion-editorial-calendar.jpg" alt="Notion Editorial Calendar showing every content item with campaign, channel, language, owner, and status" style="width:100%;height:auto;display:block">
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94;margin-top:12px">FIG. 01 — EDITORIAL CALENDAR, NOTION</div>
+      <div style="font-size:13.5px;line-height:1.5;color:#5c5c62;margin-top:6px;max-width:30em">The system of record. Stage 05 reads Status from this database to decide what publishes.</div>
+    </div>
+    <div style="min-width:0">
+      <div style="border:1px solid #e4e2dd;background:#ffffff;padding:10px">
+        <img src="photos/make-scenario.jpg" alt="Make.com scenario execution log showing the Notion and Bluesky modules both completing successfully" style="width:100%;height:auto;display:block">
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8e8e94;margin-top:12px">FIG. 02 — THE AUTOMATION, MAKE.COM</div>
+      <div style="font-size:13.5px;line-height:1.5;color:#5c5c62;margin-top:6px;max-width:30em">Notion → Filter → Bluesky, confirmed running end to end.</div>
+    </div>
+  </div>
+</section>
+
+<footer style="margin-top:88px;padding-top:28px;border-top:1px solid #16161a;display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:start">
+  <div style="font-size:16px;line-height:1.55;color:#3c3c42;max-width:34em;text-wrap:pretty">The pipeline runs on a pottery brand, but nothing here is specific to pottery. Swap the product, keep the architecture: grounded drafting, one human review step, a system of record, and an automation that only does what it's reliable at.</div>
+  <div style="display:flex;flex-direction:column;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5c5c62">
+    <a href="https://martamani.github.io/alondra-cup-launch/">Live site ↗</a>
+    <a href="https://github.com/martamani/alondra-cup-launch">Repository ↗</a>
+  </div>
+</footer>
+
+</div>
+</div>
+
+</body></html>
