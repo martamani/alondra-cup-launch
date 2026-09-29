@@ -44,8 +44,8 @@ Manually edited the AI-generated LinkedIn post against the styleguide: cut redun
 
 ![Editing pass: before/after table with rationale](photos/editing-table.jpg)
 
-## 6. Styleguide validation
-Tested whether the Brand Kit styleguide actually influences new output: asked AirOps to generate care instructions using the stored voice guidelines. Output matched the intended tone (plain, no spec-sheet language).
+## 6. Style guide validation
+Tested whether the Brand Kit style guide actually influences new output: asked AirOps to generate care instructions using the stored voice guidelines. Output matched the intended tone (plain, no spec-sheet language).
 
 **Screenshot:** care-instructions.md and the AirOps generation.
 
